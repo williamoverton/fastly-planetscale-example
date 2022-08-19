@@ -1,0 +1,21 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["William Overton <woverton@fastly.com>"]
+description = "An empty application template for the Fastly Compute@Edge environment which simply returns a 200 OK response."
+language = "javascript"
+manifest_version = 2
+name = "planetscale-demo"
+service_id = "0xKhBXSQrlKf3IKKhLJ3Hp"
+
+[local_server]
+
+  [local_server.backends]
+
+    [local_server.backends.planetscale]
+      url = "https://aws-eu-west-2.connect.psdb.cloud"
+
+  [local_server.dictionaries]
+    [local_server.dictionaries.config]
+      file = "config.json"
+      format = "json"
